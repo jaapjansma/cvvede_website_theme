@@ -1,0 +1,222 @@
+#toolbar ul {
+	top: auto;
+}
+
+body {
+	background-color: $lightgrey;
+}
+
+body > header {
+	background: #ffffff;
+	background: -moz-linear-gradient(left, #ffffff 0%, $lightgrey 100%);
+	background: -webkit-linear-gradient(left, #ffffff 0%,$lightgrey 100%);
+	background: linear-gradient(to right, #ffffff 0%,$lightgrey 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$lightgrey',GradientType=1 );
+		
+	a#logo {
+		display: block;
+		float: left;
+		background-image: url('../images/cvve-logo.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	a#logo span {
+		display: none;
+	}
+	nav#topbar {
+		height: 56px;
+		text-align: right;
+		background-color: $green;
+	}
+}
+
+section#teaser {
+	width: 100%;
+	height: 556px;
+	background-image: url('../images/home-foto.jpg');
+	background-size: cover;
+	background-position: top center;
+	display: table;
+	
+	div.intro {
+		display: table-cell;
+		vertical-align: middle;
+		
+		p {
+			max-width: 720px;			
+			color: #fff;
+                        text-shadow: 2px 2px 8px black;
+			@include vr($font-display, $font-size-xl);
+		}		
+	}
+}
+
+section#main {
+	
+	article#content {
+		margin: 0 auto;
+		background-color: #fff;
+		max-width: 752px;
+		
+		p:last-child {
+			padding-bottom: 0;
+		}
+	}
+	
+	section.row {		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		header {
+			flex: 0 0 236px;
+			padding: 8px 0;
+			
+			h1 {
+				@include vr($font-display, $font-size-m);				
+			}
+		}
+		
+		article {
+			-webkit-transition: all 0.2s; /* Safari */
+		    transition: all 0.2s;				
+		
+			a {
+				display: block;
+				padding: 16px;				
+				height: 100%;
+			}
+			p {
+				color: $darkgrey;
+				
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+		
+			&:last-child {
+				margin-right: 0;
+			}				
+		}
+		
+		&.wanted {
+			article {
+				background-color: $blue;
+				
+				time {
+					display: block;
+					color: #fff;
+					margin-bottom: 16px;
+				}
+				h1 {
+					color: #fff;
+					margin-bottom: 0;
+				}
+							
+				&:hover {
+					background-color: $darkgrey;
+				}				
+			}
+		}
+		
+		&.buddy {
+			article.sibling {
+				margin-bottom: 0;
+				
+				a {
+					display: inline;
+					padding: 0;
+				}
+			}
+		}
+		
+		&.news {
+
+			article {
+				background-color: #fff;
+
+				time {
+					display: block;
+					color: $mediumgrey;
+					margin-bottom: 16px;
+				}
+				h1 {
+					color: $darkgrey;
+					@include vr($font-display, $font-size-l);
+				}
+				
+				&:hover {
+					time {
+						color: $darkgrey;
+					}
+					h1 {
+						color: $blue;
+					}
+				}
+				
+			}
+		}	
+		
+
+		&.agenda {
+
+			article {
+				background-color: #fff;
+
+				time {
+					display: block;
+					color: $darkgrey;
+					margin-bottom: 16px;
+				}
+				h1 {
+					color: $darkgrey;
+					@include vr($font-display, $font-size-l);
+				}
+				
+				&:hover {
+					time {
+						color: $darkgrey;
+					}
+					h1 {
+						color: $blue;
+					}
+				}
+				
+				&.past {
+					time, h1, {
+						color: $mediumgrey;
+					}
+				}
+			}
+		}			
+	}
+	
+	article.sibling {
+		padding: 32px 24px 24px !important;
+		margin-top: 32px;
+		
+		&.blue {
+			h1 {
+				color: $blue;
+			}			
+			background-color: $softblue;			
+		}
+		&.purple {
+			h1 {
+				color: $purple;
+			}
+			background-color: $softpurple;
+		}
+		
+		p {
+			padding: 0;
+		}
+	}		
+}
+
+body > footer {
+	background-color: $green;
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;    
+}

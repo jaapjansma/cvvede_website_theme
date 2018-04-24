@@ -1,0 +1,22 @@
+@import "normalize";
+@import "vr/vr-main";
+@import "mappy-breakpoints";
+
+$blue: #2DAAE1;
+$softblue: #E2F2FC;
+$green: #DDDC00;
+$purple: #82358C;
+$softpurple: #F5EDFF;
+$lightgrey: #E1E1E1;
+$mediumgrey: #AEAEAE;
+$darkgrey: #4A4A4A;
+
+$breakpoints: (
+  'small'     : 320px,
+  'medium'    : 640px,
+  'large'     : 1088px);
+
+@import	"parts/typography",
+		"parts/structure",
+		"parts/navigation",
+		"parts/responsive";

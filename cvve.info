@@ -1,0 +1,47 @@
+name = CVVE
+description = Thema op maat voor CVVE, ontwikkeld door hylmar.
+screenshot = screenshot.gif
+package = CVVE's website
+core = "7.x"
+engine = phptemplate
+
+regions[page_top] = Page top
+regions[header] = Header
+regions[buddy] = Buddy
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar] = Sidebar
+regions[footer1] = Footer 1
+regions[footer2] = Footer 2
+regions[footer3] = Footer 3
+regions[footer4] = Footer 4
+
+features[] = logo
+features[] = name
+features[] = search
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; Stylesheets
+stylesheets[all][] = css/main.css
+
+; Scripts
+scripts[] = js/main-min.js
+
+settings[cvve_tabs] = 1
+settings[cvve_breadcrumb] = 1
+settings[cvve_breadcrumb_home] = 1
+settings[cvve_breadcrumb_separator] = »
+settings[clear_registry] = 0
+settings[cvve_ie_enabled] = 0
+settings[cvve_ie_enabled_versions][ie8] = 0
+settings[cvve_ie_enabled_versions][ie9] = 0
+
+; Information added by Drupal.org packaging script on 2016-09-13
+version = "7.x-4.3"
+core = "7.x"
+project = "basic"
+datestamp = "1473786547"
+
