@@ -55,12 +55,12 @@
 		
 		if (isset($children) && count($children)>0): 
 			foreach ($children as $child): 
-				$link_title = $child['link']['options']['attributes']['title'] ?? 'Lees meer';?>
+				$description = $child['link']['options']['attributes']['title'] ?? '';?>
 			
 			<article class="sibling blue">
 				<h1><?php print $child['link']['title']; ?></h1>
-				<p><?php //print $child['link']['summary'];?></p>
-				<a href="<?php print url($child['link']['href']);?>" class="cta cta-blue"><?php print $link_title; ?></a>
+				<p><?php print $description; ?></p>
+				<a href="<?php print url($child['link']['href']);?>" title="<?php print $child['link']['title']; ?>" class="cta cta-blue">Lees meer</a>
 			</article>
 
 			

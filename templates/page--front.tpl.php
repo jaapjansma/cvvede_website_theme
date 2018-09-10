@@ -63,13 +63,7 @@
 	<?php endforeach; ?>
 </section>
 
-<section class="row buddy">
-	<article class="sibling purple">
-		<h1>Are you looking for a buddy?</h1>
-		<p>Are you a refugee and do you live in Ede? Would you like to get in touch with Dutch people? To do fun things, drink a cup of tea, eat together, cook, play a game, go to the market or something else?</p>
-		<a href="https://crm.cvvede.nl/vwn/maatje-statushouders" class="cta cta-purple">Apply for a dutch buddy</a>			
-	</article>
-	
+<section class="row buddy">	
 	<?php print render($page['buddy']); ?>
 	
 	<article class="dummy"></article>
