@@ -74,11 +74,16 @@
 		<h1>Actueel</h1><a href="/over-cvve/actueel/" title="Toon alle berichten" class="cta cta-blue">Alle berichten</a>
 	</header>
 	<?php foreach ($variables['cvve_nodes']['article']['nodes'] as $article): ?>
-		<article><a href="<?php print url('node/'.$article->nid);  ?>" title="Ga naar hulpvraag">
-			<time datetime="<?php print format_date($article->created, 'custom', 'Y-m-d');?>"><?php print format_date($article->created, 'custom', 'j F Y');?></time>
-			<h1><?php print $article->title; ?></h1>
-			<p><?php print $article->body['und'][0]['summary']; ?></p>
-		</a></article>		
+		<article>
+            <a href="<?php print url('node/'.$article->nid);  ?>" title="Ga naar hulpvraag">
+			    <time datetime="<?php print format_date($article->created, 'custom', 'Y-m-d');?>"><?php print format_date($article->created, 'custom', 'j F Y');?></time>
+			    <h1><?php print $article->title; ?></h1>
+                <?php if (isset($article->field_image['und'][0]['fid']) && $article->field_image['und'][0]['fid']) {
+                    print theme('image_style', array('style_name' => 'menu', 'path' => $article->field_image['und'][0]['uri']));
+                } ?>
+			    <p><?php print $article->body['und'][0]['summary']; ?></p>
+		    </a>
+        </article>
 	<?php endforeach; ?>
 </section>
 
