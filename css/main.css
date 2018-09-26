@@ -992,11 +992,12 @@ nav.footer-col .some-list li {
   }
   section#main section.row.buddy article.sibling {
     margin-top: 0;
+    padding-bottom: 0px !important;
     flex: 1 0 236px;
   }
   section#main section.row.buddy article:first-child.sibling {
     margin-left: 236px;
-    flex: 2 0 236px;
+    flex: 1 0 236px;
   }
   section#main section.row.buddy article p {
     padding-bottom: 1.75rem;
