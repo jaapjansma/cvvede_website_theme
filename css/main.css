@@ -899,9 +899,6 @@ section#main section.row header {
 section#main section.row article {
   margin-bottom: 1px;
 }
-section#main section.row.buddy {
-  margin-top: 56px;
-}
 body.one-sidebar section#main aside#sidebar {
   padding: 32px 24px 0;
   max-width: 752px;
@@ -994,12 +991,15 @@ nav.footer-col .some-list li {
     margin-right: 16px;
   }
   section#main section.row.buddy article.sibling {
-    margin-left: 236px;
     margin-top: 0;
-    flex: 2 0 488px;
-  }
-  section#main section.row.buddy article.dummy {
     flex: 1 0 236px;
+  }
+  section#main section.row.buddy article:first-child.sibling {
+    margin-left: 236px;
+    flex: 2 0 236px;
+  }
+  section#main section.row.buddy article p {
+    padding-bottom: 1.75rem;
   }
   body.one-sidebar section#main {
     display: flex;

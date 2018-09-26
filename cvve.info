@@ -7,6 +7,7 @@ engine = phptemplate
 
 regions[page_top] = Page top
 regions[header] = Header
+regions[volunteer] = Vrijwilliger
 regions[buddy] = Buddy
 regions[highlighted] = Highlighted
 regions[help] = Help
