@@ -527,6 +527,8 @@ section#main section.row.buddy article.sibling a {
 }
 section#main section.row.news article {
   background-color: #fff;
+  position: relative;
+  height: 320px;
 }
 section#main section.row.news article time {
   display: block;
@@ -547,6 +549,8 @@ section#main section.row.news article h1 {
 }
 section#main section.row.news article img {
   max-width: 100%;
+  position: absolute;
+  bottom: 16px;
 }
 section#main section.row.news article:hover time {
   color: #4A4A4A;
@@ -604,6 +608,7 @@ section#main article.sibling p {
 }
 section#main article.sibling img {
   max-width: 100%;
+  margin-bottom: 16px;
 }
 body>footer {
   background-color: #DDDC00;

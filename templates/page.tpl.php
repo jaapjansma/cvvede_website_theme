@@ -60,7 +60,8 @@
 
 			
 			<article class="sibling blue">
-				<h1><?php print $child['link']['title']; ?></h1>
+			<h1><?php print $child['link']['title']; ?></h1>
+
                 <?php if ($child['link']['options']['content']['image']) {
                     $image = file_load($child['link']['options']['content']['image']);
                     print theme("image_style", array('path' => $image->uri, 'style_name' => 'menu', 'alt' => $child['link']['title'], 'title' => $child['link']['title']));

@@ -79,7 +79,7 @@
 			    <time datetime="<?php print format_date($article->created, 'custom', 'Y-m-d');?>"><?php print format_date($article->created, 'custom', 'j F Y');?></time>
 			    <h1><?php print $article->title; ?></h1>
                 <?php if (isset($article->field_image['und'][0]['fid']) && $article->field_image['und'][0]['fid']) {
-                    print theme('image_style', array('style_name' => 'large', 'path' => $article->field_image['und'][0]['uri']));
+                    print theme('image_style', array('style_name' => 'homepagina', 'path' => $article->field_image['und'][0]['uri']));
                 } ?>
 			    <p><?php print $article->body['und'][0]['summary']; ?></p>
 		    </a>
