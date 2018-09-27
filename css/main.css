@@ -493,7 +493,8 @@ section#main section.row article {
 section#main section.row article a {
   display: block;
   padding: 16px;
-  height: 100%}
+  height: 100%;
+}
 section#main section.row article p {
   color: #4A4A4A;
 }
@@ -529,6 +530,11 @@ section#main section.row.news article {
   background-color: #fff;
   position: relative;
   height: 320px;
+  padding: 16px;
+}
+section#main section.row.news article a {
+  position: relative;
+  padding: 0px;
 }
 section#main section.row.news article time {
   display: block;
@@ -550,7 +556,8 @@ section#main section.row.news article h1 {
 section#main section.row.news article img {
   max-width: 100%;
   position: absolute;
-  bottom: 16px;
+  bottom: 0px;
+  height: auto;
 }
 section#main section.row.news article:hover time {
   color: #4A4A4A;
@@ -560,6 +567,9 @@ section#main section.row.news article:hover h1 {
 }
 section#main section.row.agenda article {
   background-color: #fff;
+}
+section#main section.row.agenda article a {
+  margin: 0px;
 }
 section#main section.row.agenda article time {
   display: block;
