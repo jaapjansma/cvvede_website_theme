@@ -153,6 +153,7 @@ function cvve_preprocess_page(&$variables, $hook) {
 		$eventParameters = array();
 		$eventParameters['return'] = array('id', 'event_start_date', 'title', 'summary', 'registration_start_date', 'registration_end_date', 'registration_link_text', 'is_online_registration', );
 		$eventParameters['is_active'] = 1;
+                $eventParameters['is_public'] = 1;
 		$eventOptions['limit'] = 3;
 		$eventOptions['offset'] = 0;
 		$eventOptions['sort'] = 'event_start_date DESC';
