@@ -1028,6 +1028,9 @@ nav.footer-col .some-list li {
     flex: 1 0 320px;
     padding: 24px;
   }
+  aside#sidebar section.row:first-child {
+    margin-top: 56px;
+  }
   nav#cta {
     padding: 16px 56px;
   }

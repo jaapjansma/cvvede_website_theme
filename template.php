@@ -238,6 +238,20 @@ function cvve_preprocess_block(&$variables) {
 		$variables['classes_array'][] = 'last';
 	}
 
+	if ($variables['block']->delta == '5') {
+		$query = new EntityFieldQuery;
+		$types = array('cvve_wanted');
+		foreach ($types as $type) {
+			$query->entityCondition('entity_type', 'node')->entityCondition('bundle', $type)->propertyCondition('status', 1)->propertyOrderBy('created', 'DESC')->range(0, 3);
+			$temp = $query -> execute();
+			if (isset($temp['node'])) {
+				$result[$type]['nids'] = array_keys($temp['node']);
+				$result[$type]['nodes'] = node_load_multiple($result[$type]['nids']);
+			}
+		}
+		$variables['cvve_nodes'] = $result;
+	}
+
 	// Add simple classes.
 	$variables['classes_array'][] = 'block';
 }
