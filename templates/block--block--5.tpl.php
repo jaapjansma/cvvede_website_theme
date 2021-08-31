@@ -1,5 +1,3 @@
-<?php
-
 <section class="row wanted">
     <header>
         <h1>Gezocht</h1><a href="/ik-wil-helpen/hulpvragen/" title="Toon alle hulpvragen" class="cta cta-blue">Alle hulpvragen</a>
@@ -13,10 +11,6 @@
   <?php endforeach; ?>
 </section>
 
-/**
- * @file
- */
-?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?> data-bid="<?php print $block->bid ?>">
   <?php print render($title_prefix); ?>
   <?php if ($block->subject): ?>
