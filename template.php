@@ -165,8 +165,8 @@ function cvve_preprocess_page(&$variables, $hook) {
 			$object = json_decode(json_encode($value));
 			$event = array();
 			$event['date_time'] = new DateTime($object -> event_start_date);
-			$event['title'] = $object -> title;
-			$event['summary'] = $object -> summary;
+			$event['title'] = $object->title;
+			$event['summary'] = $object->summary;
 			$event['registration_link'] = '';
 			$event['classes'] = '';
 			$event['link'] = '';
@@ -231,19 +231,6 @@ function cvve_preprocess_block(&$variables) {
 	// If block id (count) is 1, it's first in region.
 	if ($variables['block_id'] == '1') {
 		$variables['classes_array'][] = 'first';
-	}
-	if ($variables['block_id'] == '5') {
-		$query = new EntityFieldQuery;
-		$types = array('article', 'cvve_wanted');
-		foreach ($types as $type) {
-			$query -> entityCondition('entity_type', 'node') -> entityCondition('bundle', $type) -> propertyCondition('status', 1) -> propertyOrderBy('created', 'DESC') -> range(0, 3);
-			$temp = $query -> execute();
-			if (isset($temp['node'])) {
-				$result[$type]['nids'] = array_keys($temp['node']);
-				$result[$type]['nodes'] = node_load_multiple($result[$type]['nids']);
-			}
-		}
-		$variables['cvve_nodes'] = $result;
 	}
 	// Count amount of blocks about to be rendered in the same region.
 	$block_count = count(block_list($variables['elements']['#block'] -> region));
