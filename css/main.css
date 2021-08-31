@@ -519,9 +519,11 @@ section#main section.row.wanted article h1 {
 section#main section.row.wanted article:hover {
   background-color: #4A4A4A;
 }
+section#main section.row.harskamp article.sibling,
 section#main section.row.buddy article.sibling {
   margin-bottom: 0;
 }
+section#main section.row.harskamp article.sibling a,
 section#main section.row.buddy article.sibling a {
   display: inline;
   padding: 0;
@@ -1000,15 +1002,18 @@ nav.footer-col .some-list li {
     flex: 1 0 236px;
     margin-right: 16px;
   }
+  section#main section.row.harskamp article.sibling,
   section#main section.row.buddy article.sibling {
     margin-top: 0;
     padding-bottom: 0px !important;
     flex: 1 0 236px;
   }
+  section#main section.row.harskamp article:first-child.sibling,
   section#main section.row.buddy article:first-child.sibling {
     margin-left: 236px;
     flex: 1 0 236px;
   }
+  section#main section.row.harskamp article p,
   section#main section.row.buddy article p {
     padding-bottom: 1.75rem;
   }
