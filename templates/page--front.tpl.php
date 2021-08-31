@@ -50,9 +50,8 @@
 	
 <section id="main">
 
-<section class="row buddy">
-  <?php print render($page['volunteer']); ?>
-  <?php print render($page['buddy']); ?>
+<section class="row harskamp">
+  <?php print render($page['harskamp']); ?>
 </section>
 
 <section class="row wanted">
