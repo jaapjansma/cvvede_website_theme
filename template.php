@@ -232,6 +232,19 @@ function cvve_preprocess_block(&$variables) {
 	if ($variables['block_id'] == '1') {
 		$variables['classes_array'][] = 'first';
 	}
+	if ($variables['block_id'] == '5') {
+		$query = new EntityFieldQuery;
+		$types = array('article', 'cvve_wanted');
+		foreach ($types as $type) {
+			$query -> entityCondition('entity_type', 'node') -> entityCondition('bundle', $type) -> propertyCondition('status', 1) -> propertyOrderBy('created', 'DESC') -> range(0, 3);
+			$temp = $query -> execute();
+			if (isset($temp['node'])) {
+				$result[$type]['nids'] = array_keys($temp['node']);
+				$result[$type]['nodes'] = node_load_multiple($result[$type]['nids']);
+			}
+		}
+		$variables['cvve_nodes'] = $result;
+	}
 	// Count amount of blocks about to be rendered in the same region.
 	$block_count = count(block_list($variables['elements']['#block'] -> region));
 	if ($variables['block_id'] == $block_count) {
