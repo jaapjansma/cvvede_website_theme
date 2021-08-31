@@ -149,7 +149,7 @@ function cvve_preprocess_page(&$variables, $hook) {
 			}
 		}
 		$variables['cvve_nodes'] = $result;
-
+		
 		$eventParameters = array();
 		$eventParameters['return'] = array('id', 'event_start_date', 'title', 'summary', 'registration_start_date', 'registration_end_date', 'registration_link_text', 'is_online_registration', );
 		$eventParameters['is_active'] = 1;
@@ -165,8 +165,8 @@ function cvve_preprocess_page(&$variables, $hook) {
 			$object = json_decode(json_encode($value));
 			$event = array();
 			$event['date_time'] = new DateTime($object -> event_start_date);
-			$event['title'] = $object -> title;
-			$event['summary'] = $object -> summary;
+			$event['title'] = $object->title;
+			$event['summary'] = $object->summary;
 			$event['registration_link'] = '';
 			$event['classes'] = '';
 			$event['link'] = '';
@@ -236,6 +236,20 @@ function cvve_preprocess_block(&$variables) {
 	$block_count = count(block_list($variables['elements']['#block'] -> region));
 	if ($variables['block_id'] == $block_count) {
 		$variables['classes_array'][] = 'last';
+	}
+
+	if ($variables['block']->delta == '5') {
+		$query = new EntityFieldQuery;
+		$types = array('cvve_wanted');
+		foreach ($types as $type) {
+			$query->entityCondition('entity_type', 'node')->entityCondition('bundle', $type)->propertyCondition('status', 1)->propertyOrderBy('created', 'DESC')->range(0, 3);
+			$temp = $query -> execute();
+			if (isset($temp['node'])) {
+				$result[$type]['nids'] = array_keys($temp['node']);
+				$result[$type]['nodes'] = node_load_multiple($result[$type]['nids']);
+			}
+		}
+		$variables['cvve_nodes'] = $result;
 	}
 
 	// Add simple classes.
