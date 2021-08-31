@@ -135,21 +135,21 @@ function cvve_preprocess_page(&$variables, $hook) {
 		$variables['theme_hook_suggestions'][] = 'page__' . $variables['node'] -> type;
 		$variables['theme_hook_suggestions'][] = "page__node__" . $variables['node'] -> nid;
 	}
+	
+	$query = new EntityFieldQuery;
+	$types = array('article', 'cvve_wanted');
+	foreach ($types as $type) {
+		$query -> entityCondition('entity_type', 'node') -> entityCondition('bundle', $type) -> propertyCondition('status', 1) -> propertyOrderBy('created', 'DESC') -> range(0, 3);
+		$temp = $query -> execute();
+		if (isset($temp['node'])) {
+			$result[$type]['nids'] = array_keys($temp['node']);
+			$result[$type]['nodes'] = node_load_multiple($result[$type]['nids']);
+		}
+	}
+	$variables['cvve_nodes'] = $result;
 
 	// If front-page get content types
 	if (drupal_is_front_page()) {
-		$query = new EntityFieldQuery;
-		$types = array('article', 'cvve_wanted');
-		foreach ($types as $type) {
-			$query -> entityCondition('entity_type', 'node') -> entityCondition('bundle', $type) -> propertyCondition('status', 1) -> propertyOrderBy('created', 'DESC') -> range(0, 3);
-			$temp = $query -> execute();
-			if (isset($temp['node'])) {
-				$result[$type]['nids'] = array_keys($temp['node']);
-				$result[$type]['nodes'] = node_load_multiple($result[$type]['nids']);
-			}
-		}
-		$variables['cvve_nodes'] = $result;
-
 		$eventParameters = array();
 		$eventParameters['return'] = array('id', 'event_start_date', 'title', 'summary', 'registration_start_date', 'registration_end_date', 'registration_link_text', 'is_online_registration', );
 		$eventParameters['is_active'] = 1;
