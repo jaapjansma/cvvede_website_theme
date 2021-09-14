@@ -951,6 +951,10 @@ fieldset.payment-method-form.form-wrapper p {
   padding-left: 20px;
   font-style: italic;
 }
+/* Layout box */
+.webform-layout-box.horiz {
+  max-width: 48%;
+}
 @media all and (min-width: 40em) {
   body>header nav#topbar ul.some-list li.mobile-hidden {
     display: inline;
