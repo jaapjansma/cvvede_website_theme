@@ -348,6 +348,22 @@ small {
   background-color: #F5EDFF;
   color: #82358C;
   font-weight: bold;
+  
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  top: calc(.153em + .375rem - (1.75rem * 0.5));
+  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  margin: -.125rem 0 1.625rem;
+  padding: .875rem 1.75rem;
+  text-decoration: none;
+  border: .125rem solid;
+  cursor: pointer;
 }
 form {
   margin: 0 0 0rem;
