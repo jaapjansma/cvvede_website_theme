@@ -934,8 +934,12 @@ nav.footer-col .some-list li {
 fieldset.payment-method-form.form-wrapper {
   border: none;
   padding: 0px;
+  margin: 0px;
 }
 fieldset.payment-method-form.form-wrapper legend {
+  display: none;
+}
+fieldset.payment-method-form.form-wrapper pre {
   display: none;
 }
 @media all and (min-width: 40em) {
