@@ -946,6 +946,11 @@ fieldset.payment-method-form.form-wrapper legend {
 fieldset.payment-method-form.form-wrapper pre {
   display: none;
 }
+fieldset.payment-method-form.form-wrapper p {
+  padding-bottom: 0px;
+  padding-left: 20px;
+  font-style: italic;
+}
 @media all and (min-width: 40em) {
   body>header nav#topbar ul.some-list li.mobile-hidden {
     display: inline;
