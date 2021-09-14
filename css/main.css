@@ -931,11 +931,11 @@ nav.footer-col ul+h4 {
 nav.footer-col .some-list li {
   margin-right: 16px;
 }
-fieldset.payment-method-form form-wrapper {
+fieldset.payment-method-form.form-wrapper {
   border: none;
   padding: 0px;
 }
-fieldset.payment-method-form form-wrapper legend {
+fieldset.payment-method-form.form-wrapper legend {
   display: none;
 }
 @media all and (min-width: 40em) {
