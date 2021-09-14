@@ -256,4 +256,10 @@ body:before {
   display: inline-block;
 }
 
+.button-primary {
+  background-color: #F5EDFF;
+  color: #82358C;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=layout.css.map */
