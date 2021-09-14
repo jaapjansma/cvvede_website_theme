@@ -344,6 +344,11 @@ small {
   padding: 0;
   border: none;
 }
+.button-primary {
+  background-color: #F5EDFF;
+  color: #82358C;
+  font-weight: bold;
+}
 form {
   margin: 0 0 0rem;
   font-family: "Open Sans", sans-serif;
