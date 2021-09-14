@@ -952,7 +952,7 @@ fieldset.payment-method-form.form-wrapper p {
   font-style: italic;
 }
 /* Layout box */
-.webform-layout-box.horiz {
+.webform-layout-box.horiz > * {
   max-width: 48%;
 }
 @media all and (min-width: 40em) {
