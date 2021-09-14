@@ -935,6 +935,10 @@ nav.footer-col .some-list li {
 #webform-client-form-550 label {
   padding-bottom: 0px;
 }
+#webform-client-form-550 #edit-submitted-bedrag {
+  max-width: 8em;
+  text-align: right;
+}
 fieldset.payment-method-form.form-wrapper {
   border: none;
   padding: 0px;
