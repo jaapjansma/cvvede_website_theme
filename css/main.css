@@ -987,7 +987,8 @@ fieldset.payment-method-form.form-wrapper p {
 }
 /* Layout box */
 .webform-layout-box.horiz > * {
-  max-width: 48%;
+  max-width: 100%;
+  margin-left: 0px;
 }
 @media all and (min-width: 40em) {
   body>header nav#topbar ul.some-list li.mobile-hidden {
@@ -1110,5 +1111,9 @@ fieldset.payment-method-form.form-wrapper p {
   }
   nav.footer-col.extra-nav {
     display: block;
+  }
+  .webform-layout-box.horiz > * {
+    max-width: 50%;
+    padding-right: 1em;
   }
 }
