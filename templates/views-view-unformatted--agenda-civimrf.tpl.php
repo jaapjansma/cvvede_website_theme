@@ -8,6 +8,7 @@
  */
 ?>
 <style type="text/css">
+	article.node .views-field-start-date,
 	article.node .views-field-event-start-date{
 		display: block;
 		color: #AEAEAE;
