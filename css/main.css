@@ -977,13 +977,12 @@ fieldset.payment-method-form.form-wrapper p {
   font-style: italic;
 }
 .form-item-submitted-betaalwijze-payment-method-all-forms-5-cvve-donatie-iban {
-  max-width: 48%;
+  max-width: 100%;
   float: left;
 }
 .form-item-submitted-betaalwijze-payment-method-all-forms-5-cvve-donatie-iban-check {
-  max-width: 48%;
+  max-width: 100%;
   float: left;
-  margin-left: 1em;
 }
 /* Layout box */
 .webform-layout-box.horiz > * {
@@ -1111,6 +1110,11 @@ fieldset.payment-method-form.form-wrapper p {
   }
   nav.footer-col.extra-nav {
     display: block;
+  }
+  .form-item-submitted-betaalwijze-payment-method-all-forms-5-cvve-donatie-iban,
+  .form-item-submitted-betaalwijze-payment-method-all-forms-5-cvve-donatie-iban-check {
+     max-width: 50%;
+     padding-right: 1em;
   }
   .webform-layout-box.horiz > * {
     max-width: 50%;
