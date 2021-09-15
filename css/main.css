@@ -1116,6 +1116,9 @@ fieldset.payment-method-form.form-wrapper p {
      max-width: 50%;
      padding-right: 1em;
   }
+  #webform-client-form-550 .form-item.webform-component {
+    padding-right: 1em;
+  }
   .webform-layout-box.horiz > * {
     max-width: 50%;
     padding-right: 1em;
