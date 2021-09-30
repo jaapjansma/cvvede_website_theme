@@ -953,17 +953,17 @@ nav.footer-col .some-list li {
   margin-right: 16px;
 }
 /* Donatie formulier */
-#webform-client-form-550 label {
+#webform-client-form-556 label {
   padding-bottom: 0px;
 }
-#webform-client-form-550 .webform-component--bedrag-layoutbox--bedrag {
+#webform-client-form-556 .webform-component--bedrag-layoutbox--bedrag {
   max-width: 30em;
 }
-#webform-client-form-550 #edit-submitted-bedrag-layoutbox-bedrag .form-item.form-type-radio {
+#webform-client-form-556 #edit-submitted-bedrag-layoutbox-bedrag .form-item.form-type-radio {
   width: 6em;
   float: left;
 }
-#webform-client-form-550 #edit-submitted-bedrag-layoutbox-bedrag-anders {
+#webform-client-form-556 #edit-submitted-bedrag-layoutbox-bedrag-anders {
   max-width: 8em;
   text-align: right;
 }
@@ -1123,7 +1123,7 @@ fieldset.payment-method-form.form-wrapper p {
      max-width: 50%;
      padding-right: 1em;
   }
-  #webform-client-form-550 .form-item.webform-component {
+  #webform-client-form-556 .form-item.webform-component {
     padding-right: 1em;
   }
   .webform-layout-box.horiz > * {
