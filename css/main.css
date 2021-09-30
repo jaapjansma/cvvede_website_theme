@@ -957,7 +957,7 @@ nav.footer-col .some-list li {
   padding-bottom: 0px;
 }
 #webform-client-form-550 .webform-component--bedrag-layoutbox--bedrag {
-  width: 30em;
+  max-width: 30em;
 }
 #webform-client-form-550 #edit-submitted-bedrag-layoutbox-bedrag .form-item.form-type-radio {
   width: 6em;
