@@ -956,7 +956,11 @@ nav.footer-col .some-list li {
 #webform-client-form-550 label {
   padding-bottom: 0px;
 }
-#webform-client-form-550 #edit-submitted-bedrag {
+#webform-client-form-550 #edit-submitted-bedrag-layoutbox-bedrag .form-item.form-type-radio {
+  width: 8em;
+  float: left;
+}
+#webform-client-form-550 #edit-submitted-bedrag-layoutbox-bedrag-anders {
   max-width: 8em;
   text-align: right;
 }
