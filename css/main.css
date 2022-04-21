@@ -427,6 +427,9 @@ input[type=radio]+label, input[type=checkbox]+label {
   margin: 0 .875rem 0 0;
   padding: 0;
 }
+.form-item.webform-component > div.description {
+  padding-bottom: .75rem;
+}
 #toolbar ul {
   top: auto;
 }
