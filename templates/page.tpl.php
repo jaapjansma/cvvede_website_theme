@@ -66,7 +66,7 @@
                     $image = file_load($child['link']['options']['content']['image']);
                     print theme("image_style", array('path' => $image->uri, 'style_name' => 'menu', 'alt' => $child['link']['title'], 'title' => $child['link']['title']));
                 } ?>
-				<p><?php print $description; ?></p>
+				<p><?php print nl2br($description); ?></p>
 				<a href="<?php print url($child['link']['href']);?>" title="<?php print $child['link']['title']; ?>" class="cta cta-blue">Lees meer</a>
 			</article>
 
